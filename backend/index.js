@@ -29,12 +29,12 @@ const Task = sequelize.define("Task", {
 sequelize.sync().then(() => console.log("Database synced"));
 
 // Routes
-app.get("/tasks", async (req, res) => {
+app.get("/api/tasks", async (req, res) => {
   const tasks = await Task.findAll();
   res.json(tasks);
 });
 
-app.post("/tasks", async (req, res) => {
+app.post("/api/tasks", async (req, res) => {
   const task = await Task.create(req.body);
   res.status(201).json(task);
 });

@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
+const BASE_URL = '/api';
 
 export const getTasks = async () => {
-  const response = await axios.get(`${API_URL}/tasks`);
+  const response = await axios.get(`${BASE_URL}/tasks`);
   return response.data;
 };
 
 export const createTask = async (task) => {
-  const response = await axios.post(`${API_URL}/tasks`, task);
+  const response = await axios.post(`${BASE_URL}/tasks`, task);
   return response.data;
 };
