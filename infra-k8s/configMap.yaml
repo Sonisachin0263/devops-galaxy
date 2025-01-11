@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  NODE_ENV: production
+  DB_HOST: 35.222.175.73
+  DB_NAME: task_mgmt
+  DB_PORT: "3306"
